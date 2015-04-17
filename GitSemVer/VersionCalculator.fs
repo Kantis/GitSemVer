@@ -3,4 +3,4 @@
 open System.IO
 
 let CalculateVersion(path:string) =
-    "A"
+    let repo = new LibGit2Sharp.Repository(path)
