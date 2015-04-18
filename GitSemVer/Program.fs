@@ -1,8 +1,9 @@
 ﻿// Learn more about F# at http://fsharp.net
 // See the 'F# Tutorial' project for more help.
 
-open VersionCalculator;
-open System.IO;
+open VersionCalculator
+open System.IO
+open System
 
 [<EntryPoint>]
 let main argv = 
@@ -16,4 +17,7 @@ let main argv =
         Directory.GetCurrentDirectory()
         |> CalculateVersion 
         |> printfn "%A"
+
+    let char = Console.ReadKey()
+
     0 // return an integer exit code
